@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'direccion' => $data['direccion'],
             'celular' => $data['celular'],
             'tipousers' => $data['tipousers'],
-            'profesion' => null,
+            'profesion' => $data['profesion'],
             'logo' => null,
             'nombre_responsable' => null,
         ]);
