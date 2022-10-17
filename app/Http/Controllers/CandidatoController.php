@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\View;
 
 class CandidatoController extends Controller
 {
     public function create(){ //llama la vista  del registro candidato
-        return view('candidato.create');
+        
+        return view('users.candidato.create');
     }
 
     public function store (Request $request){ //sube los datos a la bd
@@ -20,13 +24,13 @@ class CandidatoController extends Controller
         ]);
 
         $candidato=User::create([       //sube los datos
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'direccion' => $data['direccion'],
-            'celular' => $data['celular'],
-            'tipousers' => $data['tipousers'],
-            'profesion' => $data['profesion'],
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'direccion' => $request['direccion'],
+            'celular' => $request['celular'],
+            'tipousers' => $request['tipousers'],
+            'profesion' => $request['profesion'],
             'logo' => null,
             'nombre_responsable' => null,
         
