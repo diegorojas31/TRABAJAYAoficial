@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\CandidatoController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //candidatos
-Route::get('/users/candidato/create',[CandidatoController::class,'create'] )->name('candidato.create');
+Route::get('/users/candidato/create',[CandidatoController::class,'create'] )->name('users.candidato.create');
 
 
 
