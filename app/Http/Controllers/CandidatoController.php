@@ -14,7 +14,12 @@ class CandidatoController extends Controller
         return view('users.candidato.create');
     }
 
-    public function store (Request $request){ //sube los datos a la bd
+    public function tipousuario(){ //llama la vista  de tipos de usuarios
+        
+        return view('users.tipousuario');
+    }
+
+    public function store(Request $request){ //sube los datos a la bd
 
         $credentials= Request()->validate([ //valida los datos del usuario
             'name' => ['required', 'string', 'max:255'],

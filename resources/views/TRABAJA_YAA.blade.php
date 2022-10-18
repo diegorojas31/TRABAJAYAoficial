@@ -10,16 +10,16 @@
 
 
     </head>
-    <body class="antialiased" bgcolor="black" >
+    <body class="antialiased" >
     
     
     <div>
                             
                             <img src="IMAGENES/LOGO1.png"  style="width: 50px">               
-                            <a href="login" style="color:white;"> Iniciar Sesion</a>
+                            <a href="login" > Iniciar Sesion</a>
 
-                                                 <a href="register" style="color:white;">Registrar Candidato</a>
-                                                 <a href="register" style="color:white;">Registrar Empresa</a>
+                                                 <a href="{{route('users.candidato.create')}}" >Registrar Candidato</a>
+                                                 <a href="{{route('users.empresa.create')}}" >Registrar Empresa</a>
                                                             </div>
                                                             
                                                                         
